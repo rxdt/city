@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: vivify_dev
+  pool: 5
+  username: **changeme
+  password: **changeme
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: vivify_test
+  pool: 5
+  username: **changeme
+  password: **changeme
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: vivify_prod
+  pool: 5
+  username: **changeme
+  password: **changeme
+  host: localhost
