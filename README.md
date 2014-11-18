@@ -36,9 +36,9 @@ bundle exec rake db:seed
 ```
 and
 ```
-bundle exec rails s
+foreman start
 ```
-to run the server locally.
+to run the server locally.  Visit at [localhost:5000](http://localhost:5000).
 
 
 Development Process
