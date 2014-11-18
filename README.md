@@ -53,4 +53,3 @@ Specifically:
 * When code is ready for a review, push to origin and create a new PR (`git push origin jd-some-feature-name`, new PR in GitHub UI) 
 * Once PR is given the thumbs-up, merge to master (`git ship`).
 * **Important:** Don't click the GitHub 'merge' button - we utilize squash merges to keep a linear commit history in master.
-* Delete your branch locally (via `git prune-branches`) and in GitHub (using the 'delete branch' button).
