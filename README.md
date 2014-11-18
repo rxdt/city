@@ -10,6 +10,7 @@ App is built on
 
 * Rails 4
 * Postgres
+* Unicorn web server
 
 General notes on architecture:
 
@@ -24,6 +25,7 @@ Getting Started
 
 1. `git clone` the repo.
 2. Install GitTown for some handy workflow tooling. (`brew tap Originate/gittown; brew install git-town`)
+3. Copy `config/database.yml.example` to `config/database.yml` and tweak to match your local config
 
 Then do the usual
 ```
