@@ -1,6 +1,6 @@
 class CreateDeals < ActiveRecord::Migration
   def change
-    create_table :tables do |t|
+    create_table :deals do |t|
       t.string :company_name, null: false
       t.text :blurb
       t.text :description
