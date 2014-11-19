@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118183913) do
+ActiveRecord::Schema.define(version: 20141118210219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "tables", force: true do |t|
+    t.string   "company_name",        null: false
+    t.text     "blurb"
+    t.text     "description"
+    t.string   "round"
+    t.float    "raise"
+    t.float    "commitment"
+    t.float    "min_investment"
+    t.string   "security_type"
+    t.float    "conversion_discount"
+    t.float    "valuation_cap"
+    t.float    "interest_rate"
+    t.float    "warranty_coverage"
+    t.integer  "note_term"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
