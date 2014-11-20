@@ -40,6 +40,8 @@ foreman start
 ```
 to run the server locally.  Visit at [localhost:5000](http://localhost:5000).
 
+The seeds create two users, an investor ('investor@test.org'), and an admin ('admin@test.org'), both with the password 'password'.
+
 
 Development Process
 -------------------
