@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  after_initialize :skip_confirmation_notification!
   rolify
 
   devise :database_authenticatable,
