@@ -3,6 +3,7 @@ ruby '2.1.3'
 gem 'rails', '4.1.6'
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'apipie-rails'
 gem 'autoprefixer-rails'
 gem 'bson_ext'
 gem 'cancancan', '~> 1.9'
@@ -11,6 +12,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'maruku'
 gem 'pg'
 gem 'rolify'
 gem 'simple_token_authentication'
@@ -24,8 +26,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'apipie-rails'
-  gem 'maruku'
   gem 'rspec-rails'
 end
 
