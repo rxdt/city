@@ -46,6 +46,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    apipie-rails (0.2.6)
+      json
     arbre (1.0.2)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
@@ -125,6 +127,7 @@ GEM
       launchy (~> 2.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    maruku (0.7.2)
     mime-types (2.4.3)
     mini_portile (0.6.0)
     minitest (5.4.3)
@@ -234,6 +237,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  apipie-rails
   autoprefixer-rails
   bson_ext
   cancancan (~> 1.9)
@@ -246,6 +250,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
+  maruku
   pg
   rails (= 4.1.6)
   rails_12factor

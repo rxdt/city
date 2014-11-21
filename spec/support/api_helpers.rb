@@ -16,14 +16,32 @@ module ApiHelpers
   end
 end
 
-RSpec.shared_examples 'an unauthorized API response' do
-  it 'responds with unauthorized status' do
-    expect(response_status).to eq 401
+RSpec.shared_examples 'an ok API response' do
+  it 'and respond with ok (200) status' do
+    expect(response_status).to eq 200
   end
 end
 
 RSpec.shared_examples 'a created API response' do
-  it 'responds with status CREATED' do
+  it 'and respond with created (201) status' do
     expect(response_status).to eq 201
+  end
+end
+
+RSpec.shared_examples 'a bad request API response' do
+  it 'and respond with bad request (400) status' do
+    expect(response_status).to eq 400
+  end
+end
+
+RSpec.shared_examples 'an unauthorized API response' do
+  it 'and respond with unauthorized (401) status' do
+    expect(response_status).to eq 401
+  end
+end
+
+RSpec.shared_examples 'a forbidden API response' do
+  it 'and respond with forbidden (403) status' do
+    expect(response_status).to eq 403
   end
 end

@@ -24,6 +24,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'apipie-rails'
+  gem 'maruku'
   gem 'rspec-rails'
 end
 
