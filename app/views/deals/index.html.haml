@@ -1,6 +1,5 @@
-.deals_filters
+.filters
   = render 'deals_filters'
   %br
   %br
-.deals_listing
-  = render @deals
+= section :deals_list, locals: { deals: @deals }

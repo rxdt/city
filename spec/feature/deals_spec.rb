@@ -16,7 +16,7 @@ feature 'deals page feature spec' do
     end
 
     it 'should show mutliple records' do
-      expect(page).to have_selector('.deal_cell', count: 7)
+      expect(page).to have_selector('.dealCard', count: 7)
     end
   end
 end

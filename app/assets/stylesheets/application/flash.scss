@@ -1,0 +1,9 @@
+@mixin flash_style($background-color, $text-color) {
+  width: 100%;
+  padding: 10px;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+p.notice { @include flash_style(lighten(green, 70%), green); }
+p.alert { @include flash_style(lighten(yellow, 40%), brown); }

@@ -1,0 +1,31 @@
+@import 'application/elements';
+@import 'application/main';
+
+.header {
+  width: 100%;
+  background-color: #888;
+  color: #fff;
+
+  .container {
+    max-width: $content-width;
+    margin: auto;
+
+    .brand {
+      float: left;
+      font-size: 32px;
+      line-height: 60px;
+    }
+
+    .links {
+      float: right;
+      font-size: 16px;
+      li {
+        float: left;
+        width: 100px;
+        line-height: 60px;
+      }
+    }
+  }
+
+  @include clearfix();
+}

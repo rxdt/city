@@ -1,0 +1,12 @@
+$content-width: 960px;
+
+
+body {
+  margin: 0;
+
+  > .content {
+    max-width: $content-width;
+    margin: auto;
+  }
+
+}

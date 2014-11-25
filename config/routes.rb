@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   end
 
   authenticate :user do
-    root 'stub#index'
     resources :deals, only: [ :index ]
+
+    root 'deals#index'
   end
   
   namespace :api do

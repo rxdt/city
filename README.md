@@ -18,6 +18,7 @@ General notes on architecture:
 * ActiveAdmin for back-of-house administration by Vivify personnel
 * JSON API for mobile app(s) available under /api/v1/ route, using simple token authorization.
   * API documentation via [ApiPie](https://github.com/Apipie/apipie-rails)(? TBD...)
+* sections_rails plugin for easily grouping frontend assets with views
 
 
 Getting Started
@@ -55,3 +56,35 @@ Specifically:
 * When code is ready for a review, push to origin and create a new PR (`git push origin jd-some-feature-name`, new PR in GitHub UI) 
 * Once PR is given the thumbs-up, merge to master (`git ship`).
 * **Important:** Don't click the GitHub 'merge' button - we utilize squash merges to keep a linear commit history in master.
+
+Coding Standards
+----------------
+
+Frontend - CSS
+--------------
+
+CSS classes should use camelCase for nouns, and dashes to add modifiers.  
+Example: 
+
+```
+<div class="cardsList">
+  <div class="cardsList-stuff">
+    ...
+  </div>
+</div>
+```
+
+All colors should reference named SCSS color value variables set in colors.scss.  (With the exception of greys, which should use 12-bit values a la 
+'#123' etc.)
+
+Common styling should be factored into it's own stylesheet and utilized as a mixin per best practice.
+
+Frontend - Coffeescript
+-----------------------
+
+Todo
+
+Backend - Ruby
+--------------
+
+Todo
