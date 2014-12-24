@@ -37,10 +37,10 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
-
+gem 'pg'
 gem 'actionpack'
 gem 'activeadmin', github: 'activeadmin'
 gem 'meta_search'
-
+gem 'rolify'
 gem 'cancancan'
 
