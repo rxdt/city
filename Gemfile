@@ -22,7 +22,10 @@ gem 'jbuilder'
 gem 'sdoc',         group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+ group :development do
+  gem 'letter_opener'
+  gem 'spring'
+ end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
@@ -38,9 +41,9 @@ gem 'unicorn'
 
 gem 'devise'
 gem 'pg'
-gem 'actionpack'
-gem 'activeadmin', github: 'activeadmin'
-gem 'meta_search'
+#gem 'actionpack'
+#gem 'activeadmin', github: 'activeadmin'
+#gem 'meta_search'
 gem 'rolify'
 gem 'cancancan'
 
