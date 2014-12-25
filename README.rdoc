@@ -26,6 +26,9 @@ General notes on development:
 
 git-town is used to automate high-level git processes and ensure a linear git history
 
+The seeds create two users, an investor ('client@test.org'), and an admin ('admin@test.org'), both with the password 'password'.
+
+===========================================================
 
 Getting started:
 

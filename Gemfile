@@ -41,9 +41,8 @@ gem 'unicorn'
 
 gem 'devise'
 gem 'pg'
-#gem 'actionpack'
-#gem 'activeadmin', github: 'activeadmin'
-#gem 'meta_search'
+gem 'actionpack'
+gem 'activeadmin', github: 'activeadmin'
 gem 'rolify'
 gem 'cancancan'
 
