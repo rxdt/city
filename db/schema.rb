@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20141120183351) do
     t.text     "description"
     t.string   "demographic"
     t.integer  "foot_traffic"
-    t.text     "operating_hours"
+    t.string   "operating_hours"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,12 +1,10 @@
 .header
   .container
-    .brand CitiXcape
+    .brand CityXcape
     - if current_user
       .links
         %ul
-          %li= link_to 'Screens', screens_path
-          %li People
-          %li My Profile
+          %li My Account
           - if current_user.is_admin?
             %li= link_to 'Admin', admin_dashboard_path
           %li= link_to 'Sign out', destroy_user_session_path, method: :delete

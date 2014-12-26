@@ -15,5 +15,4 @@ class User < ActiveRecord::Base
     user = User.find_for_authentication email: email
     user if user and user.valid_password?(password)
   end
-
 end

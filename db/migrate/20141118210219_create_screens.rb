@@ -6,7 +6,7 @@ class CreateScreens < ActiveRecord::Migration
       t.text     :description
       t.string   :demographic
       t.integer  :foot_traffic
-      t.text     :operating_hours
+      t.string   :operating_hours
 
       t.timestamps
     end
