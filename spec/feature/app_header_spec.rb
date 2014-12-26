@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'application header' do
-  let(:investor) { create :user, role: :investor }
+  let(:client) { create :user, role: :client }
   let(:admin) { create :user, role: :admin }
 
   describe 'when no user is logged in' do
@@ -37,9 +37,9 @@ feature 'application header' do
     end
   end
 
-  describe 'when user is logged in as an investor' do
+  describe 'when user is logged in as an client' do
     before do
-      sign_in_as investor
+      sign_in_as client
       visit root_path
     end
 

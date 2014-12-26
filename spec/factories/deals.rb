@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  factory :deal do
-    sequence(:company_name) { |n| "company_name#{n}" }
+  factory :screen do
+    sequence(:screen_name) { |n| "screen_name#{n}" }
     blurb 'blurb'
   end
 end

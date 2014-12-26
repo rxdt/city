@@ -4,7 +4,7 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
-module VivifyRails
+module CitiXcapeRails
   class Application < Rails::Application
     config.assets.paths << 'app/sections'
   end

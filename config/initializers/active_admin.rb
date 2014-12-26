@@ -1,6 +1,6 @@
 ActiveAdmin.setup do |config|
 
-  config.site_title = "Vivify"
+  config.site_title = "CitiXcape"
 
   config.site_title_link = "/"
   # config.site_title_image = "logo.png"

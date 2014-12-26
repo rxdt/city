@@ -1,22 +1,22 @@
 require 'rails_helper'
 
-feature 'deals page feature spec' do
+feature 'screens page feature spec' do
   let(:user) { create :user }
-  let!(:deals) { create_list(:deal, 7) }
+  let!(:screens) { create_list(:screen, 7) }
 
-  describe 'visiting the deals page after user is signed in' do
+  describe 'visiting the screens page after user is signed in' do
     before do
       sign_in_as user
-      visit deals_path
+      visit screens_path
     end
 
-    it 'shows the deals page with a company name and blurb for each deal' do
-      expect(page).to have_content 'company_name'
+    it 'shows the screens page with a Screen name and blurb for each screen' do
+      expect(page).to have_content 'screen_name'
       expect(page).to have_content 'blurb'
     end
 
     it 'should show mutliple records' do
-      expect(page).to have_selector('.dealCard', count: 7)
+      expect(page).to have_selector('.screenCard', count: 7)
     end
   end
 end

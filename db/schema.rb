@@ -31,24 +31,6 @@ ActiveRecord::Schema.define(version: 20141120183351) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "deals", force: true do |t|
-    t.string   "company_name",        null: false
-    t.text     "blurb"
-    t.text     "description"
-    t.string   "round"
-    t.float    "raise"
-    t.float    "commitment"
-    t.float    "min_investment"
-    t.string   "security_type"
-    t.float    "conversion_discount"
-    t.float    "valuation_cap"
-    t.float    "interest_rate"
-    t.float    "warranty_coverage"
-    t.integer  "note_term"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "roles", force: true do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -59,6 +41,17 @@ ActiveRecord::Schema.define(version: 20141120183351) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "screens", force: true do |t|
+    t.string   "screen_name",     null: false
+    t.string   "address"
+    t.text     "description"
+    t.string   "demographic"
+    t.integer  "foot_traffic"
+    t.text     "operating_hours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

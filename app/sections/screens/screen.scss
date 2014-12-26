@@ -1,6 +1,6 @@
 @import 'application/elements';
 
-.dealCard {
+.screen {
   @include drop-shadow(5px, 5px, 5px);
   width: 300px;
   float: left;
@@ -15,7 +15,7 @@
   .info {
     margin: 0 20px 10px 10px;
 
-    .company {
+    .screen {
       font-size: 24px;
       line-height: 32px;
       font-weight: 800;
