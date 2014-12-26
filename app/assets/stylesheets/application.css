@@ -11,5 +11,6 @@
  * file per style scope.
  *
  *= require_tree ./application/
+ *= require application_sections
  *= require_self
  */
