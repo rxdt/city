@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120183351) do
+ActiveRecord::Schema.define(version: 20141226210951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20141120183351) do
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
   create_table "screens", force: true do |t|
-    t.string   "screen_name",     null: false
+    t.string   "screen_name",                 null: false
     t.string   "address"
     t.text     "description"
     t.string   "demographic"
@@ -51,6 +51,11 @@ ActiveRecord::Schema.define(version: 20141120183351) do
     t.string   "operating_hours"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "location_image_file_name"
+    t.string   "location_image_content_type"
+    t.integer  "location_image_file_size"
+    t.datetime "location_image_updated_at"
+    t.string   "asset_key"
   end
 
   create_table "users", force: true do |t|
@@ -71,6 +76,7 @@ ActiveRecord::Schema.define(version: 20141120183351) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "authentication_token"
+    t.string   "asset_key"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", using: :btree

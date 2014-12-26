@@ -4,7 +4,8 @@ ActiveAdmin.register Screen do
                 :address,
                 :demographic,
                 :foot_traffic,
-                :operating_hours
+                :operating_hours,
+                :location_image, :location_image_delete
 
   index do
     id_column
@@ -18,8 +19,11 @@ ActiveAdmin.register Screen do
     actions
   end
 
-  show do
+  show do |obj|
     attributes_table do
+      row :location_image do
+        image_tag(obj.location_image.url(:card))
+      end
       row :screen_name
       row :address
       row :operating_hours
@@ -33,12 +37,17 @@ ActiveAdmin.register Screen do
   filter :screen_name
   filter :address
 
-  form do |f|
-    f.inputs "Screen Details" do
+  form html: { enctype: "multipart/form-data" } do |f|
+    f.semantic_errors
+    f.inputs except: [ :location_image_file_name, :location_image_content_type, :location_image_file_size, :location_image_updated_at ] do
       f.input :screen_name
       f.input :address
       f.input :operating_hours
       f.input :foot_traffic
+      f.inputs 'Location Image' do
+        f.input :location_image, as: :file, hint: f.image_tag(f.object.location_image.url(:thumb))
+        f.input :location_image_delete, as: :boolean, label: 'Remove image'
+      end
     end
     f.actions
   end

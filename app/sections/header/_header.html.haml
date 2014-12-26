@@ -4,7 +4,7 @@
     - if current_user
       .links
         %ul
-          %li My Account
+          %li= link_to 'My Account', show_user_registration_path(current_user.id)
           - if current_user.is_admin?
             %li= link_to 'Admin', admin_dashboard_path
           %li= link_to 'Sign out', destroy_user_session_path, method: :delete

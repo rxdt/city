@@ -1,6 +1,7 @@
 require 'exceptions'
 
 class Api::V1::BaseController < ActionController::Base
+  protect_from_forgery with: :null_session
   respond_to :json
 
   rescue_from StandardError, with: :internal

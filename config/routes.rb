@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
   apipie
   ActiveAdmin.routes(self)
-  devise_for :users, skip: [:registrations]
+  devise_for :users,
+             skip: [ :registrations ],
+             path: '',
+             path_names: { sign_in: 'login', sign_out: 'logout'}
 
   as :user do
-    get 'users/edit' => 'devise/registrations#edit', as: 'edit_user_registration'
+    get 'login' => 'devise/sessions#new', as: 'login'
+    delete 'logout' => 'devise/sessions#destroy', as: 'logout'
+
+    get 'users/:id/edit' => 'devise/registrations#edit', as: 'edit_user_registration'
+    get 'users/:id' => 'devise/registrations#show', as: 'show_user_registration'
+
     put 'users' => 'devise/registrations#update', as: 'user_registration'
   end
 

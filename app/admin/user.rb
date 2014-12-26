@@ -14,7 +14,9 @@ ActiveAdmin.register User do
     column :roles do |user|
       user.roles.pluck(:name).join(", ")
     end
-    actions
+    actions defaults: true do |obj|
+      link_to 'Send Reset Password Email', send_reset_email_admin_user_path(obj), method: :post
+    end  
   end
 
   show do
@@ -45,5 +47,14 @@ ActiveAdmin.register User do
       f.input :roles, as: :check_boxes
     end
     f.actions
+  end
+
+
+  member_action :send_reset_email, method: :post do
+    authorize! :manage, User
+    user = User.find params[:id]
+    user.send_reset_password_instructions
+    flash[:notice] = 'Reset password email sent to user.'
+    redirect_to action: :index
   end
 end
