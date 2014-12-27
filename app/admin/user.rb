@@ -1,4 +1,6 @@
 ActiveAdmin.register User do
+  decorate_with UserDecorator
+
   permit_params :email, 
                 :password, 
                 :password_confirmation, 
@@ -7,10 +9,10 @@ ActiveAdmin.register User do
   index do
     selectable_column
     id_column
-    column :email
+    column :first_name
+    column :last_name
     column :current_sign_in_at
     column :sign_in_count
-    column :created_at
     column :roles do |user|
       user.roles.pluck(:name).join(", ")
     end
@@ -21,6 +23,8 @@ ActiveAdmin.register User do
 
   show do
     attributes_table do
+      row :first_name
+      row :last_name
       row :email
       row :sign_in_count
       row :confirmed_at

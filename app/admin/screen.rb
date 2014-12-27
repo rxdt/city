@@ -1,4 +1,6 @@
 ActiveAdmin.register Screen do
+  decorate_with ScreenDecorator
+
   permit_params :screen_name,
                 :description,
                 :address,

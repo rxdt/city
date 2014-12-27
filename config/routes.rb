@@ -9,18 +9,15 @@ Rails.application.routes.draw do
   as :user do
     get 'login' => 'devise/sessions#new', as: 'login'
     delete 'logout' => 'devise/sessions#destroy', as: 'logout'
-
-    get 'users/:id/edit' => 'devise/registrations#edit', as: 'edit_user_registration'
-    get 'users/:id' => 'devise/registrations#show', as: 'show_user_registration'
-
-    put 'users' => 'devise/registrations#update', as: 'user_registration'
   end
 
-  authenticate :user do
-    resources :screens, only: [ :index ]
+  resources :users, only: [ :show ]
+  resource :account, only: [ :edit, :update ], controller: :account
+  get 'my_ads' => 'users#my_ads'
 
-    root 'screens#index'
-  end
+  resources :screens, only: [ :index, :show ]
+
+  root 'screens#index'
   
   namespace :api do
     namespace :v1 do

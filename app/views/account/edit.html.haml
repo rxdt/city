@@ -1,0 +1,22 @@
+= simple_form_for @user, url: account_url(@user) do |f|
+  %fieldset
+    %legend Name
+    = f.input :first_name
+    = f.input :last_name
+  %fieldset
+    %legend Account
+    = f.input :email
+    = f.input :password
+    = f.input :password_confirmation
+    = f.input :current_password
+  %fieldset
+    %legend Contact Info
+    = f.input :phone_office
+    = f.input :phone_home
+    = f.input :phone_mobile
+    = f.input :address_street
+    = f.input :address_city
+    = f.input :address_state
+    = f.input :address_zip
+  %div
+    = f.submit 'Update'
