@@ -1,0 +1,2 @@
+class FAQController < ApplicationController 
+end

@@ -1,0 +1,9 @@
+.ad_image
+  = form_for @ad, url: wizard_path, multipart: true, method: :put do |f|
+    = f.label :ad_image, 'Ad Image'
+    = f.file_field :ad_image, as: :file
+    = f.submit 'Upload Image'
+  .show-ad-image
+    SUBMIT UPLOAD DOESN'T WORK YET
+  .next-step-button
+    = link_to 'next', next_wizard_path

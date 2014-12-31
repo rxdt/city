@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(version: 20141227080912) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "ads", force: true do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.string   "ad_image_file_name"
+    t.string   "ad_image_content_type"
+    t.integer  "ad_image_file_size"
+    t.datetime "ad_image_updated_at"
     t.string   "url"
-    t.boolean  "active",             default: true, null: false
-    t.boolean  "boolean",            default: true, null: false
+    t.boolean  "active",                default: true, null: false
+    t.boolean  "boolean",               default: true, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

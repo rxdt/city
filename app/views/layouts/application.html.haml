@@ -10,12 +10,14 @@
     = yield :head
 
   %body
-    = section :header
     .content
+      - if current_user 
+        = section :header
       - unless notice.blank?
         %p.notice= notice
       - unless alert.blank?
         %p.alert= alert
       = yield
-    = section :footer
+      - if current_user 
+        = section :footer
   = yield :js

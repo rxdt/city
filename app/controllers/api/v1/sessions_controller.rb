@@ -22,5 +22,4 @@ class Api::V1::SessionsController < Api::V1::BaseController
     raise Exceptions::AuthenticationUnknown unless @user
     respond_with @user, location: api_v1_sessions_url, status: :created, status: :created
   end
-
 end

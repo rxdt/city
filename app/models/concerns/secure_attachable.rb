@@ -6,7 +6,7 @@ module SecureAttachable
   end
 
   def assign_asset_key
-    self.asset_key ||= generate_asset_key
+    # self.asset_key ||= generate_asset_key
   end
 
   def generate_asset_key
