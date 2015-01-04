@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   include SecureAttachable
 
-  has_and_belongs_to_many :ads
-  #has_and_belongs_to_many :transactions
-  accepts_nested_attributes_for :ads, allow_destroy: true
+  has_many :transactions, through: :ads
+
+  accepts_nested_attributes_for :transactions, allow_destroy: true
 
   acts_as_token_authenticatable
   after_initialize :skip_confirmation_notification!

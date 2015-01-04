@@ -2,6 +2,7 @@ class Ad < ActiveRecord::Base
   include SecureAttachable  
 
   belongs_to :screen
+  belongs_to :user
 
   has_attached_file :ad_image,
                     styles: { large: '900x300#', card: '300x300>', thumb: '100x100>' },

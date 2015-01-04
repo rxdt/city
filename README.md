@@ -8,6 +8,7 @@ Rails app is built on:
 - Unicorn web server
 
 
+
 General notes on architecture:
 
 - Devise + CanCanCan + Rolify for authentication, authorization, and roles management
@@ -19,9 +20,13 @@ General notes on architecture:
 - sections_rails plugin for easily grouping frontend assets with views
 
 
+
 General notes on development:
 
 git-town is used to automate high-level git processes and ensure a linear git history
+
+sections_rails gem to organize front end files
+
 
 
 Getting started:
@@ -33,11 +38,11 @@ install PhantomJS for headless browser integration testing:
 - brew install phantomjs
 
 do the usual:
--bundle install
--bundle exec rake db:create
--bundle exec rake db:migrate
--bundle exec rake db:seed
+- bundle install
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake db:seed
   
   to run the server locally: 
-  -foreman start 
+  - foreman start 
   visit at localhost:5000

@@ -1,8 +1,13 @@
 !!! 5
 %html{lang: 'en'}
   %head
-    %title= yield :title
-    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %title CityXcape | Start Broadcasting
+    %meta{:content => "Fullscreen Form Interface: A distraction-free form concept with fancy animations", :name => "description"}/
+    %meta{:content => "fullscreen form, css animations, distraction-free, web design", :name => "keywords"}/
+    %meta{:content => "Codrops", :name => "author"}/
     = csrf_meta_tags
     = stylesheet_link_tag :application, media: 'all'
     = javascript_include_tag :application, 'data-turbolinks-track' => true

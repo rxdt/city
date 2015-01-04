@@ -13,4 +13,7 @@
  *= require_tree ./application/
  *= require application_sections
  *= require_self
+ *= require bootstrap-datepicker
+ # Or if using bootstrap v3:
+ *= require bootstrap-datepicker3
  */

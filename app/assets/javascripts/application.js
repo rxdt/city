@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require application_sections
+//= require bootstrap-datepicker
+//= require user_steps
 

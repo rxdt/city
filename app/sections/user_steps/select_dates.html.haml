@@ -1,0 +1,19 @@
+Step 2 - Select Dates for Your Image to Play
+.select_dates 
+  = form_for @ad, url: wizard_path, multipart: true, method: :put do |f|
+%br  
+  .datepicker.input-daterange.input-group
+    Start
+    %input.input-sm.form-control{ name: 'start', type: 'text' }/
+    %span.input-group-addon to
+    End
+    %input.input-sm.form-control{ name: 'end', type: 'text' }/
+    = f.submit
+.price
+  Price
+%br  
+.locations
+  locations list
+  .next-step-button
+    = link_to 'next', next_wizard_path
+
