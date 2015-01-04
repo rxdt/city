@@ -7,6 +7,7 @@ $(document).ready ->
     calendarWeeks: true
     autoclose: true
     todayHighlight: true
+    dateFormat: 'yyyy-mm-dd'
     beforeShowDay: (date) ->
       if date.getMonth() is (new Date()).getMonth()
         switch date.getDate()

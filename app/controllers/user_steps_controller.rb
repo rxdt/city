@@ -15,11 +15,11 @@ class UserStepsController < ApplicationController
 
   def update
     @ad = Ad.last
-    if @ad.update_attribute(:start, params[:start])
-      flash[:success] = 'Start date selected'
-    else
-      flash[:error] = 'Failed to select date'
-    end
+    @ad.update_attribute(params[:start])
+    #   flash[:success] = 'Start date selected'
+    # else
+    #   flash[:error] = 'Failed to select date'
+    # end
     render_wizard @ad
   end
 
